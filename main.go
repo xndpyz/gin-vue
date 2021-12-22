@@ -11,5 +11,6 @@ func main() {
 	db := common.InitDB()
 	defer db.Close()
 	r.POST("/api/auth/register", controller.Register)
+	r.POST("/api/auth/login", controller.Login)
 	panic(r.Run())
 }
